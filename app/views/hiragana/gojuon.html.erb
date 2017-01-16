@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hiragana | Gojuon</title>
+	</head>
+	<body>
+		<%= link_to 'Home', root_path %>
+		<%= link_to 'Results', hiragana_results_url %><br>
+
+		<% char = Testing::GOUJON[rand(Testing::GOUJON.length)] %>
+		<%= image_tag "gojuon/#{char}.png" %><br>
+
+		<%= form_for :test do |f| %>
+			<p>
+				<%= f.label :answer %><br>
+				<%= f.text_field :answer %>
+			</p>
+		<% end %>
+
+		<%= char %><br>
+	</body>
+</html>
